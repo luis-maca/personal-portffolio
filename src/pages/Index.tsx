@@ -49,8 +49,8 @@ const Index = () => {
   ];
 
   const stats = [
-    { number: "6+", label: "Years of experience", accent: "+" },
-    { number: "95", label: "Client satisfaction", accent: "%" },
+    { number: "8", label: "Years of experience", accent: "+" },
+    { number: "6", label: "Different Industries", accent: "+" },
     { number: "20", label: "Completed Projects", accent: "+" }
   ];
 
