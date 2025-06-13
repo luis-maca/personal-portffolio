@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -225,9 +224,7 @@ const Index = () => {
               <div>
                 <h2 className="text-4xl font-bold text-white mb-6">About me</h2>
                 <p className="text-slate-300 leading-relaxed mb-8">
-                  I started my software journey from photography. Through that, I learned to 
-                  love the process of creating from scratch. Since then, this has led me to 
-                  software development as it fulfills my love for learning and building things.
+                  I began my software journey with a passion for creating from scratch, much like capturing the perfect photograph. That creative drive led me to full stack development, where I specialize in microservices architecture, cloud solutions, and robust database integration using technologies like .NET, Java, Python, and Azure. My background fuels a continuous love for learning and innovation in building scalable digital experiences.
                 </p>
               </div>
 
