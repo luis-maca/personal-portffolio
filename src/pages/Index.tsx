@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -159,9 +160,18 @@ const Index = () => {
             {/* Profile Image */}
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
-                <div className="w-80 h-80 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 p-2">
-                  <div className="w-full h-full rounded-full bg-slate-800 flex items-center justify-center overflow-hidden">
-                    <User size={120} className="text-slate-400" />
+                {/* Gradient border with orange fade effect */}
+                <div className="w-80 h-80 rounded-full bg-gradient-to-br from-orange-400 via-orange-500 to-orange-600 p-1 shadow-2xl">
+                  {/* Secondary gradient layer for fade effect */}
+                  <div className="w-full h-full rounded-full bg-gradient-to-br from-orange-300/20 via-transparent to-orange-600/30 p-2">
+                    {/* Image container */}
+                    <div className="w-full h-full rounded-full overflow-hidden bg-slate-800">
+                      <img 
+                        src="https://i.ibb.co/23SGX4nG/your-image.jpg" 
+                        alt="Luis Martinez - Full Stack Developer"
+                        className="w-full h-full object-cover rounded-full"
+                      />
+                    </div>
                   </div>
                 </div>
                 
@@ -176,6 +186,9 @@ const Index = () => {
                     <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
                   </svg>
                 </div>
+                
+                {/* Orange glow effect */}
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-orange-400/20 via-orange-500/10 to-orange-600/20 blur-xl -z-10"></div>
               </div>
             </div>
           </div>
