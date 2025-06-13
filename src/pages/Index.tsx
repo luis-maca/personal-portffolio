@@ -264,8 +264,16 @@ const Index = () => {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-16 px-6 bg-slate-800">
-        <div className="max-w-6xl mx-auto">
+      <section id="skills" className="py-16 px-6 relative">
+        {/* Background Bar Effect */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-800/50 via-slate-700/30 to-slate-800/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-orange-500/5 to-transparent"></div>
+        
+        {/* Decorative bars */}
+        <div className="absolute left-0 top-1/2 w-20 h-1 bg-orange-400 transform -translate-y-1/2"></div>
+        <div className="absolute right-0 top-1/2 w-20 h-1 bg-orange-400 transform -translate-y-1/2"></div>
+        
+        <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Technical Expertise</h2>
             <p className="text-xl text-slate-300">
@@ -275,7 +283,7 @@ const Index = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {skills.map((skill, index) => (
-              <Card key={index} className="bg-slate-900 border-slate-700 p-4 hover:border-orange-400 transition-all duration-300 hover:-translate-y-1 cursor-pointer group">
+              <Card key={index} className="bg-slate-900/80 backdrop-blur-sm border-slate-700 p-4 hover:border-orange-400 transition-all duration-300 hover:-translate-y-1 cursor-pointer group">
                 <CardContent className="p-0">
                   <div className="text-center">
                     <Badge variant="secondary" className="bg-slate-700 text-slate-300 group-hover:bg-orange-400 group-hover:text-slate-900 px-3 py-1 transition-colors">
