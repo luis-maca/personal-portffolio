@@ -1,9 +1,9 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Mail, Phone, Linkedin, Github, ChevronDown, Calendar, Briefcase, Code, User, Check, Menu, X, Target, Database, Vote, Cloud, Zap, CreditCard, MessageCircle } from "lucide-react";
+import AIChat from "@/components/AIChat";
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState("home");
@@ -306,7 +306,7 @@ const Index = () => {
 
               {/* Education & Experience */}
               <div className="space-y-6">
-                <Card className="bg-slate-800/50 backdrop-blur-sm border-slate-700 p-6 hover:border-orange-400/50 transition-all duration-300">
+                <Card className="bg-slate-800/50 backdrop-blur-sm border-slate-700 p-6 hover:border-orange-400 hover:bg-slate-800/60 transition-all duration-300">
                   <CardContent className="p-0">
                     <div className="flex items-start space-x-3">
                       <Calendar className="text-orange-400 mt-1" size={20} />
