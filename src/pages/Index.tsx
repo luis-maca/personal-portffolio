@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -19,7 +20,8 @@ const Index = () => {
   const skills = [
     ".NET Core", "Java", "Python", "Angular", "TypeScript", "Azure", 
     "Microservices", "REST APIs", "SQL Server", "WebForms", "Spring Boot",
-    "Azure DevOps", "Docker", "CI/CD", "SOAP", "HTML5", "CSS3"
+    "Azure DevOps", "Docker", "CI/CD", "SOAP", "HTML5", "CSS3", "C#",
+    "gRPC", "PostgreSQL", "Entity Framework", ".NET Framework", "Git", "Agile Methodologies"
   ];
 
   const projects = [
@@ -94,7 +96,7 @@ const Index = () => {
   const stats = [
     { number: "8", label: "Years of experience", accent: "+" },
     { number: "6", label: "Different Industries", accent: "+" },
-    { number: "20", label: "Completed Projects", accent: "+" }
+    { number: "10", label: "Completed Projects", accent: "+" }
   ];
 
   return (
@@ -522,6 +524,23 @@ const Index = () => {
                     </a>
                   </div>
                 </div>
+
+                <div className="flex items-center space-x-4 p-4 bg-slate-800/50 backdrop-blur-sm rounded-lg border border-slate-700/50 hover:border-orange-400/50 transition-all duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-500 rounded-lg flex items-center justify-center">
+                    <Github className="text-white" size={24} />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-white">GitHub</p>
+                    <a 
+                      href="https://github.com/luis-maca" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-orange-400 hover:text-orange-300 transition-colors"
+                    >
+                      github.com/luis-maca
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -579,6 +598,9 @@ const Index = () => {
           <p>&copy; 2024 Luis Martinez. All rights reserved.</p>
         </div>
       </footer>
+
+      {/* AI Assistant */}
+      <AIChat />
     </div>
   );
 };
