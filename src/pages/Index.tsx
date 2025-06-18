@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -192,7 +191,7 @@ const Index = () => {
                 </Button>
                 <Button 
                   variant="outline" 
-                  onClick={() => scrollToSection("about")}
+                  onClick={() => window.open("https://drive.google.com/file/d/18hclG8zrlqxgzsJo3Te3mCr7T1qXw56Q/view?usp=sharing", "_blank")}
                   className="border-slate-600 text-slate-300 hover:bg-slate-800 hover:text-white hover:border-orange-400 px-8 py-3 text-lg transition-all duration-300"
                 >
                   My resume
