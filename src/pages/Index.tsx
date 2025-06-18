@@ -481,115 +481,68 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            <div className="space-y-8">
-              <h3 className="text-2xl font-bold text-white">Contact Information</h3>
+          <div className="max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold text-white mb-8 text-center">Contact Information</h3>
+            
+            <div className="space-y-6">
+              <div className="flex items-center space-x-4 p-6 bg-slate-800/50 backdrop-blur-sm rounded-lg border border-slate-700/50 hover:border-orange-400/50 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-orange-500 rounded-lg flex items-center justify-center">
+                  <Mail className="text-white" size={24} />
+                </div>
+                <div>
+                  <p className="font-semibold text-white">Email</p>
+                  <a href="mailto:luismartinezca@gmail.com" className="text-orange-400 hover:text-orange-300 transition-colors">
+                    luismartinezca@gmail.com
+                  </a>
+                </div>
+              </div>
               
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4 p-4 bg-slate-800/50 backdrop-blur-sm rounded-lg border border-slate-700/50 hover:border-orange-400/50 transition-all duration-300">
-                  <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-orange-500 rounded-lg flex items-center justify-center">
-                    <Mail className="text-white" size={24} />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-white">Email</p>
-                    <a href="mailto:luismartinezca@gmail.com" className="text-orange-400 hover:text-orange-300 transition-colors">
-                      luismartinezca@gmail.com
-                    </a>
-                  </div>
+              <div className="flex items-center space-x-4 p-6 bg-slate-800/50 backdrop-blur-sm rounded-lg border border-slate-700/50 hover:border-orange-400/50 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-green-500 rounded-lg flex items-center justify-center">
+                  <Phone className="text-white" size={24} />
                 </div>
-                
-                <div className="flex items-center space-x-4 p-4 bg-slate-800/50 backdrop-blur-sm rounded-lg border border-slate-700/50 hover:border-orange-400/50 transition-all duration-300">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-green-500 rounded-lg flex items-center justify-center">
-                    <Phone className="text-white" size={24} />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-white">Phone</p>
-                    <a href="tel:+50433616242" className="text-orange-400 hover:text-orange-300 transition-colors">
-                      +504 33616242
-                    </a>
-                  </div>
+                <div>
+                  <p className="font-semibold text-white">Phone</p>
+                  <a href="tel:+50433616242" className="text-orange-400 hover:text-orange-300 transition-colors">
+                    +504 33616242
+                  </a>
                 </div>
-                
-                <div className="flex items-center space-x-4 p-4 bg-slate-800/50 backdrop-blur-sm rounded-lg border border-slate-700/50 hover:border-orange-400/50 transition-all duration-300">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-500 rounded-lg flex items-center justify-center">
-                    <Linkedin className="text-white" size={24} />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-white">LinkedIn</p>
-                    <a 
-                      href="https://www.linkedin.com/in/luisenrique0295/" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-orange-400 hover:text-orange-300 transition-colors"
-                    >
-                      linkedin.com/in/luisenrique0295
-                    </a>
-                  </div>
+              </div>
+              
+              <div className="flex items-center space-x-4 p-6 bg-slate-800/50 backdrop-blur-sm rounded-lg border border-slate-700/50 hover:border-orange-400/50 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-500 rounded-lg flex items-center justify-center">
+                  <Linkedin className="text-white" size={24} />
                 </div>
+                <div>
+                  <p className="font-semibold text-white">LinkedIn</p>
+                  <a 
+                    href="https://www.linkedin.com/in/luisenrique0295/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-orange-400 hover:text-orange-300 transition-colors"
+                  >
+                    linkedin.com/in/luisenrique0295
+                  </a>
+                </div>
+              </div>
 
-                <div className="flex items-center space-x-4 p-4 bg-slate-800/50 backdrop-blur-sm rounded-lg border border-slate-700/50 hover:border-orange-400/50 transition-all duration-300">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-500 rounded-lg flex items-center justify-center">
-                    <Github className="text-white" size={24} />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-white">GitHub</p>
-                    <a 
-                      href="https://github.com/luis-maca" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-orange-400 hover:text-orange-300 transition-colors"
-                    >
-                      github.com/luis-maca
-                    </a>
-                  </div>
+              <div className="flex items-center space-x-4 p-6 bg-slate-800/50 backdrop-blur-sm rounded-lg border border-slate-700/50 hover:border-orange-400/50 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-500 rounded-lg flex items-center justify-center">
+                  <Github className="text-white" size={24} />
+                </div>
+                <div>
+                  <p className="font-semibold text-white">GitHub</p>
+                  <a 
+                    href="https://github.com/luis-maca" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-orange-400 hover:text-orange-300 transition-colors"
+                  >
+                    github.com/luis-maca
+                  </a>
                 </div>
               </div>
             </div>
-
-            <Card className="bg-slate-900/50 backdrop-blur-sm border-slate-700">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-6 text-white">Send a Message</h3>
-                <form className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium mb-2 text-slate-300">Name</label>
-                      <input 
-                        type="text" 
-                        className="w-full p-3 bg-slate-800/50 border border-slate-600 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-orange-400 text-white placeholder-slate-400 transition-all duration-300"
-                        placeholder="Your Name"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium mb-2 text-slate-300">Email</label>
-                      <input 
-                        type="email" 
-                        className="w-full p-3 bg-slate-800/50 border border-slate-600 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-orange-400 text-white placeholder-slate-400 transition-all duration-300"
-                        placeholder="your.email@company.com"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium mb-2 text-slate-300">Subject</label>
-                    <input 
-                      type="text" 
-                      className="w-full p-3 bg-slate-800/50 border border-slate-600 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-orange-400 text-white placeholder-slate-400 transition-all duration-300"
-                      placeholder="Project Discussion"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium mb-2 text-slate-300">Message</label>
-                    <textarea 
-                      rows={4}
-                      className="w-full p-3 bg-slate-800/50 border border-slate-600 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-orange-400 text-white placeholder-slate-400 transition-all duration-300"
-                      placeholder="Tell me about your project or opportunity..."
-                    ></textarea>
-                  </div>
-                  <Button className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-3 border-none shadow-lg hover:shadow-orange-500/25 transition-all duration-300">
-                    Send Message
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
