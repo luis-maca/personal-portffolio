@@ -440,28 +440,31 @@ const Index = () => {
         </div>
       </section>
 
-      {/* AI Assistant Teaser */}
+      {/* AI Assistant Section */}
       <section className="py-16 px-6 relative">
         <div className="absolute left-6 top-0 w-1 h-full bg-gradient-to-b from-transparent via-green-400 to-transparent opacity-50"></div>
         
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-slate-800/50 to-slate-700/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-600/50">
             <div className="flex justify-center mb-6">
-              <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-500 rounded-full flex items-center justify-center animate-pulse">
                 <MessageCircle className="text-white" size={32} />
               </div>
             </div>
-            <h3 className="text-2xl font-bold text-white mb-4">AI Assistant Coming Soon</h3>
+            <h3 className="text-2xl font-bold text-white mb-4">Chat with My AI Assistant</h3>
             <p className="text-slate-300 mb-6">
-              Ask me anything about my experience, technologies I work with, or how I can help with your next project.
+              Have questions about my experience, technical skills, or projects? My AI assistant has detailed knowledge about my background and can help answer your questions instantly.
             </p>
-            <div className="flex flex-wrap justify-center gap-3 text-sm text-slate-400">
+            <div className="flex flex-wrap justify-center gap-3 text-sm text-slate-400 mb-6">
               <span>"What's your experience with Azure?"</span>
               <span>•</span>
-              <span>"Have you led microservice projects?"</span>
+              <span>"Tell me about your microservices projects"</span>
               <span>•</span>
-              <span>"Can you work with Angular?"</span>
+              <span>"What technologies do you work with?"</span>
             </div>
+            <p className="text-orange-400 font-medium">
+              👉 Click the chat button in the bottom right to get started!
+            </p>
           </div>
         </div>
       </section>
