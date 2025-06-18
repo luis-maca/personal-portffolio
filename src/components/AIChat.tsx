@@ -109,7 +109,7 @@ const AIChat = () => {
 
   if (!isOpen) {
     return (
-      <div className="fixed bottom-6 right-6 z-50">
+      <div className="fixed bottom-6 left-6 z-50">
         <Button
           onClick={() => setIsOpen(true)}
           className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white p-4 rounded-full shadow-lg hover:shadow-orange-500/25 transition-all duration-300"
@@ -122,7 +122,7 @@ const AIChat = () => {
   }
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-6 left-6 z-50">
       <Card className={`bg-slate-900/95 backdrop-blur-sm border-slate-700 transition-all duration-300 ${
         isMinimized ? 'w-80 h-16' : 'w-96 h-[600px]'
       }`}>

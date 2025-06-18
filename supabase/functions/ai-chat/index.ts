@@ -1,4 +1,5 @@
 
+
 import "https://deno.land/x/xhr@0.1.0/mod.ts";
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 
@@ -23,6 +24,7 @@ const systemPrompt = `You are Luis Enrique Martínez Canales' AI assistant on hi
 
 👤 General Information:
 - Full Name: Luis Enrique Martínez Canales
+- Date of Birth: February 20th, 1995
 - Location: Tegucigalpa, Honduras
 - Languages: Spanish (native), English (professional)
 - LinkedIn: linkedin.com/in/luisenrique0295
@@ -32,6 +34,12 @@ const systemPrompt = `You are Luis Enrique Martínez Canales' AI assistant on hi
 
 💼 Professional Summary:
 Luis is a Full Stack Developer with 8+ years of experience building scalable applications and enterprise solutions. His technical strengths include backend architecture, microservices, cloud-native development (Azure & AWS), and frontend engineering using Angular. He has worked on high-impact systems in sectors like education, government, finance, and energy across the U.S. and Latin America. He is passionate about clean code, DevOps automation, and delivering robust APIs that drive real business value.
+
+🏢 Work History:
+When asked about where Luis works, mention that he has worked with different companies including:
+- Allied Global
+- BAC Credomatic  
+- As a freelancer and contractor with companies like PCI, Civix, Qmerit, and Education Dynamics
 
 🔧 Key Technical Skills:
 - Languages: C#, Java, Python, TypeScript, SQL
