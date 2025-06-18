@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -16,11 +17,27 @@ const Index = () => {
     element?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const skills = [
-    ".NET Core", "Java", "Python", "Angular", "TypeScript", "Azure", 
-    "Microservices", "REST APIs", "SQL Server", "WebForms", "Spring Boot",
-    "Azure DevOps", "Docker", "CI/CD", "SOAP", "HTML5", "CSS3", "C#",
-    "gRPC", "PostgreSQL", "Entity Framework", ".NET Framework", "Git", "Agile Methodologies"
+  const skillCategories = [
+    {
+      name: "Backend",
+      skills: [".NET Core", "Java", "Python", "C#", ".NET Framework", "Spring Boot", "gRPC", "Entity Framework"]
+    },
+    {
+      name: "Frontend",
+      skills: ["Angular", "TypeScript", "HTML5", "CSS3"]
+    },
+    {
+      name: "Cloud & DevOps", 
+      skills: ["Azure", "Docker", "Azure DevOps", "CI/CD", "AWS Lambda"]
+    },
+    {
+      name: "Database & APIs",
+      skills: ["SQL Server", "PostgreSQL", "REST APIs", "SOAP", "Microservices"]
+    },
+    {
+      name: "Tools & Methods",
+      skills: ["Git", "Agile Methodologies", "WebForms"]
+    }
   ];
 
   const projects = [
@@ -200,7 +217,7 @@ const Index = () => {
 
               {/* Skills Preview */}
               <div className="flex flex-wrap gap-3 pt-8">
-                {skills.slice(0, 7).map((skill, index) => (
+                {skillCategories[0].skills.slice(0, 7).map((skill, index) => (
                   <Badge key={index} variant="secondary" className="bg-slate-800/50 text-slate-300 border border-slate-700/50 hover:border-orange-400/50 transition-all duration-300">
                     {skill}
                   </Badge>
@@ -325,22 +342,43 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Skills Section */}
-      <section id="skills" className="py-16 px-6 relative">
+      {/* Skills Section - Optimized for Mobile */}
+      <section id="skills" className="py-12 md:py-16 px-6 relative">
         {/* Background effects */}
         <div className="absolute inset-0 bg-gradient-to-r from-slate-800/30 via-slate-700/20 to-slate-800/30"></div>
         <div className="absolute left-6 top-0 w-1 h-full bg-gradient-to-b from-transparent via-blue-400 to-transparent opacity-50"></div>
         
         <div className="max-w-6xl mx-auto relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Technical Expertise</h2>
-            <p className="text-xl text-slate-300">
+          <div className="text-center mb-8 md:mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Technical Expertise</h2>
+            <p className="text-lg md:text-xl text-slate-300">
               Comprehensive skill set covering full stack development, cloud architecture, and modern frameworks
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {skills.map((skill, index) => (
+          {/* Mobile: Compact Category Layout */}
+          <div className="block md:hidden space-y-6">
+            {skillCategories.map((category, categoryIndex) => (
+              <div key={categoryIndex} className="bg-slate-900/40 backdrop-blur-sm border border-slate-700 rounded-lg p-4">
+                <h3 className="text-orange-400 font-semibold text-sm mb-3">{category.name}</h3>
+                <div className="flex flex-wrap gap-2">
+                  {category.skills.map((skill, skillIndex) => (
+                    <Badge 
+                      key={skillIndex} 
+                      variant="secondary" 
+                      className="bg-slate-700/50 text-slate-300 text-xs px-2 py-1 hover:bg-orange-400 hover:text-slate-900 transition-all duration-300"
+                    >
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Desktop: Original Grid Layout */}
+          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {skillCategories.flatMap(category => category.skills).map((skill, index) => (
               <Card key={index} className="bg-slate-900/50 backdrop-blur-sm border-slate-700 p-4 hover:border-orange-400 hover:bg-slate-800/60 transition-all duration-300 hover:-translate-y-1 cursor-pointer group">
                 <CardContent className="p-0">
                   <div className="text-center">
@@ -463,7 +501,7 @@ const Index = () => {
               <span>"What technologies do you work with?"</span>
             </div>
             <p className="text-orange-400 font-medium">
-              👉 Click the chat button in the bottom right to get started!
+              👉 Click the chat button in the bottom left to get started!
             </p>
           </div>
         </div>
